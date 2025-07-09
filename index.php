@@ -8,8 +8,8 @@ if(isset($_POST['submit'])){
     $country=$_POST['country'];
 
     $query="INSERT  INTO pdetail(name,email,phone,gender,country) VALUES('$name','$email','$phone','$gender','$country')";
-
-    if(mysqli_query($conn,$query)){
+$data=mysqli_query($conn,$query);
+    if($data){
         echo"Data inserted sucessfully";
     }
     else{
