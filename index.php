@@ -1,4 +1,22 @@
 <?php
+include("connection.php");
+if(isset($_POST['submit'])){
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+    $gender=$_POST['gender'];
+    $country=$_POST['country'];
+
+    $query="INSERT  INTO pdetail(name,email,phone,gender,country) VALUES('$name','$email','$phone','$gender','$country')";
+
+    if(mysqli_query($conn,$query)){
+        echo"Data inserted sucessfully";
+    }
+    else{
+        echo"Error in insertion";
+    }
+    mysqli_close($conn);
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,8 +29,7 @@
     <style>
 
         body{
-            /* margin: 20px;
-            padding: 20px; */
+            
              font-size:20px;
 
         }
@@ -65,15 +82,15 @@
     <input type="phone" name="phone" id="phone" require></div>
 
  <div class="form-group">
-       <label for="age">Age:</label>
-    <input type="text" name="age" id="age" require>
+       <label for="gender">Gender:</label>
+    <input type="text" name="gender" id="gemder" require>
  </div>
 
    <div class="form-group">
      <label for="country">Country:</label>
     <input type="text" name="country" id="country" require>
    </div>
-   <button type="submit">Submit</button>
+   <button type="submit"name="submit">Submit</button>
    </div>
      </form>   
 </body>
