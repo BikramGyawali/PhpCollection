@@ -3,9 +3,8 @@ session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
  $_SESSION['name']=$_POST['name'];
  $_SESSION['email']=$_POST['email'];
-
- header("Location:session_display");
- exist();
+ header("Location:sessiondisplay.php");
+exit();
 }
 ?>
 
