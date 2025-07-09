@@ -2,7 +2,7 @@
 
 session_start();
 if(!isset($_SESSION['name'])||!isset($_SESSION['email'])){
-    echo "No session found <a href='sessionstart.php'>Go Back</a>";
+    echo "No session found <a href='sessionstore.php'>Go Back</a>";
    exit();
 }
 ?>
@@ -18,5 +18,9 @@ if(!isset($_SESSION['name'])||!isset($_SESSION['email'])){
     <h2>Session Stored Data</h2>
     <p><strong>Name:</strong> <?php echo $_SESSION['name'];?></p>
     <p>Email : <?php echo $_SESSION['email'];?></p>
+
+    <?php 
+    echo "Delete the session <a href='sessiondelete.php'>Delete Session </a>"
+    ?>
 </body>
 </html>
