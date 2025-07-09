@@ -71,24 +71,24 @@ if(isset($_POST['submit'])){
    <div class="section">
     <div class="form-group">
         <label for="name">Name:</label>
-    <input type="text" name="name" id="name" require>
+    <input type="text" name="name" id="name" required>
     </div>
    <div class="form-group"> <label for="email">
         Email:
     </label>
-    <input type="email" name="email" id="email" require></div>
+    <input type="email" name="email" id="email" required></div>
 <div class="form-group">
     <label for="phone">Phone:</label>
-    <input type="phone" name="phone" id="phone" require></div>
+    <input type="text" name="phone" id="phone" required></div>
 
  <div class="form-group">
        <label for="gender">Gender:</label>
-    <input type="text" name="gender" id="gemder" require>
+    <input type="text" name="gender" id="gemder" required>
  </div>
 
    <div class="form-group">
      <label for="country">Country:</label>
-    <input type="text" name="country" id="country" require>
+    <input type="text" name="country" id="country" required>
    </div>
    <button type="submit"name="submit">Submit</button>
    </div>
