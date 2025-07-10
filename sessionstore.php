@@ -1,11 +1,22 @@
 <?php
 session_start();
 if($_SERVER["REQUEST_METHOD"]=="POST"){
- $_SESSION['name']=$_POST['name'];
+if(isset($_POST['submit'])){
+     $_SESSION['name']=$_POST['name'];
  $_SESSION['email']=$_POST['email'];
  header("Location:sessiondisplay.php");
 exit();
-}
+}}
+// if(isset($_POST['Clear'])){
+//      unset($_SESSION['name']);  // removing the name only
+//         // session_destroy();
+//         echo "✅ Session 'name' has been removed.<br>";
+//         echo "👉 Remaining Session Data:<br>";
+//         print_r($_SESSION);
+
+//     }
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +38,9 @@ exit();
  <Button name="submit" type="submit">
     Submit
  </Button>
+ <Button name="Clear" type="submit "> 
+    Clear session
+</Button>
 </form>
 
 </body>
