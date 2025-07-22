@@ -1,11 +1,13 @@
-<?php
+<?php 
 $x="";
-if(isset($_POST["add"])){
-    $a=$_POST['a'];
+if(isset($_POST['add'])){
+    $a= $_POST['a'];
     $b=$_POST['b'];
-    $c=$a+$b;
-    $x="$a + $b =$c";
+    $x=$a+$b;
+
 }
+
+
 ?>
 <html>
     <head>
